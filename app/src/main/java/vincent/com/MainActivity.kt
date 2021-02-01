@@ -22,6 +22,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         var type = if(age<18) "child" else "adult"
-        println("${name} i a ${type}")
+        println("${name} is a ${type}")
     }
 }

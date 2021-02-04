@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
         var name: String = "Alex"
         var height: Float = 1.60F
 
+
+        //if else
         if (age<5){
             println("$name est trop jeune pour jouer au basket")
         }
@@ -23,5 +25,21 @@ class MainActivity : AppCompatActivity() {
 
         var type = if(age<18) "child" else "adult"
         println("${name} is a ${type}")
+
+
+        //le mot clé when
+        when(name){
+            "Bob" -> println("c'est ${name}")
+            "Alex" -> println("c'est ${name}")
+            else -> println("c'est personne ")
+        }
+
+        //les intervales
+        when(age){
+            in 1..5 -> println("${name} est trop jeune")
+            in 6..10 -> println("${name} peut jouer !")
+            !in 1..18 -> println("${name} ne peut pas jouer avec des enfants")
+            else -> println("inconue :)")
+        }
     }
 }

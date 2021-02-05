@@ -44,6 +44,10 @@ class MainActivity : AppCompatActivity() {
 
         var newName : String?="Peter"
         newName=null
+
+        if (newName!=null){
+            println(name.length)
+        }
         //evalue la nullabilité
         println(newName?.length)
         //peut cracher

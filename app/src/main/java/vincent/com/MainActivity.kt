@@ -2,6 +2,7 @@ package vincent.com
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import java.util.*
 
 //fonction avec retour
 fun isOldEnough(age : Int): Boolean{
@@ -76,12 +77,26 @@ class MainActivity : AppCompatActivity() {
         //peut cracher
         //println(newName!!.length)
 
+        describePoeple(name, age, height)
 
+        //déclaration d'un tableau
+        val array : Array<Int> = Array<Int>(10){0}
+        //ou
+        val arraySimplifie = Array<Int>(10){0}
+        println(Arrays.toString(arraySimplifie))
 
-    describePoeple(name, age, height)
+        //deux façons de pdéclarer les éléments dans le tableau
+        val names = Array<String>(5){""}
+        names.set(0, "bob")
+        names[1] = "John"
+        println(names.get(0))
+        println(names.get(1))
 
+        val ages = arrayOf(4,5,6)
+        val indexAge = 2
+        println("le 3ème élément est : ${ages[indexAge]}")//6
 
-
-
+        ages[indexAge] = 29
+        println("Le 3ème élément est maintenant : ${ages[indexAge]}")//29
     }
 }

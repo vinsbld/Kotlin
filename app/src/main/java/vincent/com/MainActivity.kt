@@ -3,12 +3,35 @@ package vincent.com
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 
+//fonction avec retour
+fun isOldEnough(age : Int): Boolean{
+    //traitement
+    return age >=5
+}
+
+fun describePoeple(name:String, age:Int, taille:Float){
+    val canPlayOrNot = when(isOldEnoughBis(age)){
+        true -> "can play"
+        false -> "no he or she can't play"
+    }
+    println("${name} a ${age} ans, meusure ${taille}m et ${canPlayOrNot}")
+}
+
+//même fun ecrit plus simplement
+fun isOldEnoughBis(age : Int) : Boolean = age >=5
+
+//fonction sans retour
+fun isOldEnoughNoRetour(age : Int){
+    //traitement
+}
+
+
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var age: Int = 5
+        var age: Int = 10
         var name: String = "Alex"
         var height: Float = 1.60F
 
@@ -51,7 +74,13 @@ class MainActivity : AppCompatActivity() {
         //evalue la nullabilité
         println(newName?.length)
         //peut cracher
-        println(newName!!.length)
+        //println(newName!!.length)
+
+
+
+    describePoeple(name, age, height)
+
+
 
 
     }

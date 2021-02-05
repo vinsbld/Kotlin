@@ -41,5 +41,14 @@ class MainActivity : AppCompatActivity() {
             !in 1..18 -> println("${name} ne peut pas jouer avec des enfants")
             else -> println("inconue :)")
         }
+
+        var newName : String?="Peter"
+        newName=null
+        //evalue la nullabilité
+        println(newName?.length)
+        //peut cracher
+        println(newName!!.length)
+
+
     }
 }
